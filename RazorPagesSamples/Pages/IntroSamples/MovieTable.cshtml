@@ -1,0 +1,34 @@
+﻿@page
+@model RazorPagesSamples.Pages.IntroSamples.MovieTableModel
+@{
+}
+
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Titel</th>
+            <th>Genre</th>
+            <th>Jahr</th>
+            <th>Aktion</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var movie in Model.Movies)
+        {
+            <tr>
+                <td>@movie.Id</td>
+                <td>@movie.Title</td>
+                <td>@movie.Genre</td>
+                <td>@movie.ReleaseYear</td>
+                <td>
+                    <a asp-page="/IntroSamples/MovieDetails" asp-route-id="@movie.Id">
+                        Details zu ID @movie.Id
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

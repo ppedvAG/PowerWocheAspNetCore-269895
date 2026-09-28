@@ -1,0 +1,29 @@
+﻿@page
+@using System.Text.Json
+@using StateManagement.Models
+@model StateManagement.Pages.SessionEndModel
+@{
+    int? lottozahlen = HttpContext.Session.GetInt32("Lottozahlen");
+    string email = HttpContext.Session.GetString("email");
+
+    string json = HttpContext.Session.GetString("film");
+    Movie movie = JsonSerializer.Deserialize<Movie>(json);
+}
+
+@lottozahlen
+<br/>
+@email
+<br />
+
+
+@movie.Title - @movie.Description  - @movie.Price
+
+@if (movie != null)
+{
+
+    <p>@movie.Title - @movie.Description - @movie.Price </p>
+} else
+{
+    <p>Film wurde nicht geladen</p>
+}
+

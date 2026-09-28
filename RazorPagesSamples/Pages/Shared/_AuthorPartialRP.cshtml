@@ -1,0 +1,9 @@
+﻿@model List<string>
+
+<!-- Diese Partial View zeigt eine Liste von Autoren an -->
+<ul>
+    @foreach (var author in Model)
+    {
+        <li>@author</li>
+    }
+</ul>

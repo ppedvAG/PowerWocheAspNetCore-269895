@@ -1,0 +1,42 @@
+﻿@page
+@model RazorPagesSamples.Pages.PartialViewSamples.PartialViewSample4Model
+@{
+}
+
+<!-- Diese Razor Page zeigt eine Überschrift und bindet die Partial View ein -->
+<h2>Authors</h2>
+
+<!-- Container für die dynamisch geladene Partial View -->
+<div id="authorList">
+    <!-- Initiale Autorenliste wird hier geladen -->
+    @await Html.PartialAsync("_AuthorPartialRP", Model.Authors)
+</div>
+
+<!-- Button zum Laden der Partial View über AJAX -->
+<button id="loadPartialView">Load Partial View</button>
+
+
+@section Scripts {
+    <script>
+        document.getElementById("loadPartialView").addEventListener("click", function () {
+            fetch('/PartialViewSamples/PartialViewSample4?handler=Partial')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    const authorList = document.getElementById("authorList");
+                    if (authorList) {
+                        authorList.innerHTML = html;
+                    } else {
+                        console.error("Element with ID 'authorList' not found.");
+                    }
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+        });
+    </script>
+}

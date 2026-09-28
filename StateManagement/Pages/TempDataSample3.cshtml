@@ -1,0 +1,9 @@
+﻿@page
+@model StateManagement.Pages.TempDataSample3Model
+@{
+   
+}
+
+@* Ich gebe den Eintrag von Film aus, aber verhindere die Löschung dieses Eintrages nach der Response *@
+@TempData.Peek("Film") <!-- Peek() gibt den Wert zurück, löscht ihn aber nicht -->
+

@@ -1,0 +1,23 @@
+﻿@page
+@using RazorPages_mit_EFCore_Intro.Models
+@model RazorPages_mit_EFCore_Intro.Pages.Movies.EditModel
+
+
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+<partial name="_MovieFormular" model="Model.Movie" />
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+

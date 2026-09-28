@@ -1,0 +1,16 @@
+﻿@page
+@model RazorPagesSamples.Pages.RazorPageSamples.AspPageHandlerSampleModel
+@{
+}
+
+
+<!-- Allgemeine Post - Methode wird aufgerufen-->
+<form method="post">
+    <input name="eins" />
+    <input name="zwei" />
+    <hr />
+
+    <!-- wenn wir das Formular an den WebServer zurück senden, benötigen wir ein Button oder Anderes Ereignis, dass ein "Submit" auslöst -->
+    <button type="submit">Addieren</button>
+    @Model.Ergebnis
+</form>

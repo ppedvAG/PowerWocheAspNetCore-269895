@@ -1,0 +1,47 @@
+﻿@page
+@using RazorPages_Advanced.Extensions;
+@model RazorPages_Advanced.Pages.HTMLHelperSamplesModel
+
+@{
+    var links = new List<(string Text, string Url)>
+    {
+        ("Home", "/"),
+        ("About", "/about"),
+        ("Contact", "/contact")
+    };
+
+    var fields = new List<(string Label, string Name, string Type)>
+    {
+        ("Username", "username", "text"),
+        ("Password", "password", "password"),
+        ("Email", "email", "email")
+    };
+    var headers = new List<string> { "Name", "Age", "Email" };
+    var rows = new List<List<string>>
+    {
+        new List<string> { "Max Muster", "30", "john@example.com" },
+        new List<string> { "Jane Smith", "25", "jane@example.com" }
+    };
+}
+
+@Html.CustomButton("Click me", "btn btn-primary")
+
+
+@Html.CustomDropDownList("Genre", new List<string>
+{
+    "Action",
+    "Comedy",
+    "Drama",
+    "Horror",
+    "Sci-Fi"
+})
+
+
+@Html.BootstrapNavbar("MySite", links)
+
+
+@Html.BootstrapForm("/submit", "post", fields)
+
+@Html.BootstrapTable(headers, rows)
+
+@Html.MyHMTLContentWithIOC(HttpContext.RequestServices)

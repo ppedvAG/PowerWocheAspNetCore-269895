@@ -1,0 +1,26 @@
+﻿@page
+@model RazorPagesSamples.Pages.IntroSamples.MovieSampleModel
+@{
+}
+
+@if(Model.Movie is not null)
+{
+    <div class="card">
+        <div class="card-body">
+            <dl class="row mb-0">
+                <dt class="col-sm-6">Title</dt>
+                <dd class="col-sm-6">@Model.Movie.Title</dd>
+                <dt class="col-sm-6">Release Year</dt>
+                <dd class="col-sm-6">@Model.Movie.ReleaseYear</dd>
+                <dt class="col-sm-6">Genre</dt>
+                <dd class="col-sm-6">@Model.Movie.Genre</dd>
+            </dl>
+        </div>
+    </div>
+}
+else
+{
+    <div class="alert alert-warning" role="alert">
+        Movie not found.
+    </div>
+}

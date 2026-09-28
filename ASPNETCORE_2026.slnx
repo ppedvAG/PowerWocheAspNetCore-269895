@@ -1,0 +1,50 @@
+<Solution>
+  <Folder Name="/Modul001_SOLID/">
+    <Project Path="DependencyInversion/DependencyInversion.csproj" />
+    <Project Path="InterfacesSegerationPrincipe/InterfacesSegerationPrincipe.csproj" />
+    <Project Path="LizkovischeSubstitationsPrincipe/LizkovischeSubstitationsPrincipe.csproj" />
+    <Project Path="OpenClosePrincipe/OpenClosePrincipe.csproj" />
+    <Project Path="SingleResponsibility/SingleResponsibility.csproj" />
+  </Folder>
+  <Folder Name="/Modul002_IOC Containert/">
+    <Project Path="IOCContainerSample/IOCContainerSample.csproj" />
+  </Folder>
+  <Folder Name="/Modul003_ASPNETCORE_Überblick/">
+    <Project Path="FirstRazorPageApplication/FirstRazorPageApplication.csproj" />
+  </Folder>
+  <Folder Name="/Modul004_IOC Container in ASPNETCore/">
+    <Project Path="ASPNETCORE_IOC-Container-Samples/ASPNETCORE_IOC-Container-Samples.csproj" />
+  </Folder>
+  <Folder Name="/Modul005_Configuration/">
+    <Project Path="ConfigurationSamples/ConfigurationSamples.csproj" Id="ccd3a1a0-eebd-4bf9-8cea-9fe8772b6196" />
+  </Folder>
+  <Folder Name="/Modul006_RazorPages/">
+    <Project Path="RazorPagesSamples/RazorPagesSamples.csproj" Id="0cbe2e78-33fa-41c2-abf1-e3d4fd309bb3" />
+  </Folder>
+  <Folder Name="/Modul007_Logging/">
+    <Project Path="RazorPagesLogging/RazorPagesLogging.csproj" Id="3f547e71-b576-4a1f-bf5d-9afe9179ae42" />
+  </Folder>
+  <Folder Name="/Modul008_EFCore/">
+    <Project Path="RazorPages_mit_EFCore_Intro/RazorPages_mit_EFCore_Intro.csproj" Id="a8ace37d-3492-41ef-969b-9054250b4a1e" />
+  </Folder>
+  <Folder Name="/Modul009_EFCoreWithScaffolding/">
+    <Project Path="MovieRazorPages/MovieRazorPages.csproj" Id="34bbba9d-76f8-4fe1-93d9-d9675a8da154" />
+  </Folder>
+  <Folder Name="/Modul010_EFCoreEagerLoading/">
+    <Project Path="RazorPages_with_EFCore_Relationships/RazorPages_with_EFCore_Relationships.csproj" />
+    <Project Path="RazorPages_with_EFCore_Relationships_LazyLoading/RazorPages_with_EFCore_Relationships_LazyLoading.csproj" />
+  </Folder>
+  <Folder Name="/Modul011_EFCore_FluentAPI/">
+    <Project Path="EFCoreFluentAPISample/EFCoreFluentAPISample.csproj" Id="d71b7296-65c6-452d-8ce4-3dfef68c7ce6" />
+  </Folder>
+  <Folder Name="/Modul012_RazorPages_AdvancedConcepts/">
+    <Project Path="RazorPages_Advanced/RazorPages_Advanced.csproj" Id="d4b909af-15dd-4694-923e-4102cd06af96" />
+  </Folder>
+  <Folder Name="/Modul013_StateManagement/">
+    <Project Path="StateManagement/StateManagement.csproj" Id="96894458-8b44-4a4c-8220-210900930b6e" />
+    <Project Path="StateManagementMVC/StateManagementMVC.csproj" Id="6bcfd909-3573-4cc6-8e17-2dd94f371124" />
+  </Folder>
+  <Folder Name="/Modul014_Routing/">
+    <Project Path="RazorPages_RoutingSamples/RazorPages_RoutingSamples.csproj" Id="ecc12070-b737-48e2-b832-33d420d84989" />
+  </Folder>
+</Solution>

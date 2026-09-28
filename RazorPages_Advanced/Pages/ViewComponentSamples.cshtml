@@ -1,0 +1,21 @@
+﻿@page
+@model RazorPages_Advanced.Pages.ViewComponentSamplesModel
+@{
+}
+
+
+<h2>AktuelleUhrzeitViewComponent: </h2>
+
+@await Component.InvokeAsync("AktuelleUhrzeit")
+
+@await Component.InvokeAsync("Greeting", "Max")
+
+
+<h2>WeatherViewComponent Beispiel (Verwendung von IOC, Service, Modelübergabe): </h2>
+@await Component.InvokeAsync("Weather", new { city = "Berlin" })
+
+<h2>UserProfile Beispiel2 (Verwendung von IOC, Service, Modelübergabe):: </h2>
+@await Component.InvokeAsync("UserProfile", new { userId = 1 }) 
+
+<h2>ProductList - Arbeiten mit IOC, Service und Modelübergabe + ViewBag/ViewData </h2>
+@await Component.InvokeAsync("ProductList", new { category = "Elektronik" })

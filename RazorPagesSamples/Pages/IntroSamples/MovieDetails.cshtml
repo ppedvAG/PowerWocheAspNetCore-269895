@@ -1,0 +1,22 @@
+﻿@page
+@model RazorPagesSamples.Pages.IntroSamples.MovieDetailsModel
+@{
+}
+
+
+<h1>Beispiel 3: Movie-Details</h1>
+<p>Die Movie-ID wird aus der Route gelesen: <code>/IntroSamples/MovieDetails/@Model.Movie!.Id</code></p>
+
+<div class="card">
+    <div class="card-body">
+        <h2>@Model.Movie!.Title</h2>
+        <dl class="row">
+            <dt class="col-sm-3">ID</dt>
+            <dd class="col-sm-9">@Model.Movie.Id</dd>
+            <dt class="col-sm-3">Genre</dt>
+            <dd class="col-sm-9">@Model.Movie.Genre</dd>
+            <dt class="col-sm-3">Erscheinungsjahr</dt>
+            <dd class="col-sm-9">@Model.Movie.ReleaseYear</dd>
+        </dl>
+    </div>
+</div>

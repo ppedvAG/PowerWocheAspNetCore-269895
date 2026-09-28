@@ -1,0 +1,23 @@
+﻿@page
+@model ASPNETCORE_IOC_Container_Samples.Pages.IOCLifecycleSampleModel
+@{
+}
+
+
+<h1>IOC Lifecycle Demo</h1>
+
+<h2>Singleton</h2>
+<div>Instanz 1: @Model.Singleton1</div>
+<div>Instanz 2: @Model.Singleton2</div>
+
+<h2>Scoped</h2>
+<div>Instanz 1: @Model.Scoped1</div>
+<div>Instanz 2: @Model.Scoped2</div>
+
+<h2>Transient</h2>
+<div>Instanz 1: @Model.Transient1</div>
+<div>Instanz 2: @Model.Transient2</div>
+
+<hr />
+
+<p>Seite mehrfach mit F5 neu laden.</p>

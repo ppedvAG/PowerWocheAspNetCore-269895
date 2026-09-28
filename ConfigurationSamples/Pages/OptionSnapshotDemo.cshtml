@@ -1,0 +1,20 @@
+﻿@page
+@model ConfigurationSamples.Pages.OptionSnapshotDemoModel
+
+<div class="text-center">
+    <h1>IOptionsSnapshot&lt;TOptions&gt;</h1>
+    <p class="lead">Ein konsistenter Optionsstand pro HTTP-Anfrage</p>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <dl class="row mb-0">
+            <dt class="col-sm-6">Coffee-Shop</dt>
+            <dd class="col-sm-6">@Model.Shop.Name</dd>
+            <dt class="col-sm-6">Tische</dt>
+            <dd class="col-sm-6">@Model.Shop.DefaultTableCount</dd>
+            <dt class="col-sm-6">Lieferservice</dt>
+            <dd class="col-sm-6">@(Model.Shop.Features.OffersDelivery ? "Ja" : "Nein")</dd>
+        </dl>
+    </div>
+</div>

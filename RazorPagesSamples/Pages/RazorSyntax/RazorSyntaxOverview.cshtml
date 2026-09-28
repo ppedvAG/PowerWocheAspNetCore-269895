@@ -1,0 +1,111 @@
+﻿@page
+@using RazorPagesSamples.Models
+@using RazorPagesSamples.Services
+@model RazorPagesSamples.Pages.RazorSyntax.RazorSyntaxOverviewModel
+@inject IMovieService movieService; 
+
+@{
+    //ViewData wird in _Layout-Seite aufgelöst:
+    ViewData["Title"] = "Razor Syntax Overview";
+
+    DateTime currentTime = DateTime.Now;
+    IList<string> items = new List<string> { "Alice", "Bob", "Charlie" };
+    List<int> numbers = Enumerable.Range(1, 5).ToList();
+    bool isLoggedIn = true;
+    string userName = "Max Muster";
+
+    IReadOnlyList<Movie> movies = movieService.GetMovies();
+}
+
+
+<!-- Comments -->
+@* This is a Razor comment *@
+
+@{
+    string message = "Hello, Razor!";
+    string anotherMessage = "This is another message.";
+}
+<!-- Ausgabe einer Variable -->
+<p>@message</p>
+<p>@anotherMessage</p>
+
+<!-- Inline Expressions -->
+<p>Current Time: @currentTime</p>
+<p>Current Year: @DateTime.Now.Year</p>
+
+<!-- Conditional Statements -->
+@if (currentTime.Hour < 12)
+{
+    <p>Good morning!</p>
+}
+else if (currentTime.Hour < 18)
+{
+    <p>Good afternoon!</p>
+}
+else
+{
+    <p>Good evening!</p>
+}
+
+@if (isLoggedIn)
+{
+    <p>Welcome, @userName!</p>
+}
+else
+{
+    <p>Please log in.</p>
+}
+
+
+
+<ul>
+    @foreach (var item in items)
+    {
+        <li>@item</li>
+    }
+</ul>
+
+<ul>
+    @foreach (var movie in movies)
+    {
+        <li>@movie.Title</li>
+    }
+</ul>
+
+<ul>
+    @for (int i = 0; i < numbers.Count; i++)
+    {
+        <li>@numbers[i]</li>
+    }
+</ul>
+
+
+@functions {
+    public string GetGreeting()
+    {
+        return "Hello from a Razor function!";
+    }
+
+
+    public string GetTimeOfDayGreeting()
+    {
+        if (DateTime.Now.Hour < 12)
+        {
+            return "Good Morning!";
+        }
+        else if (DateTime.Now.Hour < 18)
+        {
+            return "Good Afternoon!";
+        }
+        else
+        {
+            return "Good Evening!";
+        }
+    }
+}
+
+<p>@GetGreeting()</p>
+<p>@GetTimeOfDayGreeting()</p>
+
+
+

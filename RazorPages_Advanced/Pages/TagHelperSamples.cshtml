@@ -1,0 +1,32 @@
+﻿@page
+@model RazorPages_Advanced.Pages.TagHelperSamplesModel
+@{
+}
+
+<custom name="World"></custom>
+
+<conditional is-visible="true">
+    <p>This content is visible.</p>
+</conditional>
+
+
+<card-area>
+    <card-header>Header</card-header>
+    <card-body>Body</card-body>
+</card-area>
+
+
+<accordion id="accordionExample">
+    <accordion-item header="Accordion Item #1" parent-id="accordionExample" item-id="One">
+        <p>This is the first item's accordion body.</p>
+    </accordion-item>
+    <accordion-item header="Accordion Item #2" parent-id="accordionExample" item-id="Two">
+        <p>This is the second item's accordion body.</p>
+    </accordion-item>
+    <accordion-item header="Accordion Item #3" parent-id="accordionExample" item-id="Three">
+        <p>This is the second item's accordion body.</p>
+    </accordion-item>
+    <accordion-item header="Accordion Item #4" parent-id="accordionExample" item-id="Four">
+        <p>This is the second item's accordion body.</p>
+    </accordion-item>
+</accordion>

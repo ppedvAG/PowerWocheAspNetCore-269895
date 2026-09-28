@@ -1,0 +1,54 @@
+@page
+@model RazorPages_with_EF_Relationships.Pages.CountryPages.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Country[0].ContinentId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country[0].ContinentRef)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country[0].LanguagesInCountries)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Country) {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.ContinentId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.ContinentRef)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.LanguagesInCountries)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

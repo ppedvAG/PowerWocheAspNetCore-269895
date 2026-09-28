@@ -1,0 +1,33 @@
+﻿@page
+@model ConfigurationSamples.Pages.ConfigurationSamplePageModel
+@{
+}
+
+
+<div class="card">
+    <div class="card-body">
+        <h2 class="card-title">Coffee-Shop-Einstellungen</h2>
+
+
+
+        <dl class="row">
+            <dt class="col-sm-3">Shop Name</dt>
+            <dd class="col-sm-9">@Model.ShopName</dd>
+
+            <dt class="col-sm-3">Currency</dt>
+            <dd class="col-sm-9">@Model.Currency</dd>
+
+            <dt class="col-sm-3">Table Count</dt>
+            <dd class="col-sm-9">@Model.TableCount</dd>
+
+            <dt class="col-sm-3">Offers Vegan Milk</dt>
+            <dd class="col-sm-9">@Model.OffersVeganMilk</dd>
+
+            <dt class="col-sm-3">Missing Value</dt>
+            <dd class="col-sm-9">@Model.MissingValue</dd>
+        </dl>
+
+      
+    </div>
+</div>
+
